@@ -74,6 +74,7 @@ app.post('/question', (req, res) => {
 });
 
 // POST API used for adding the responses that a user gives for a given form, options selected can be one or many
+// TODO: handle duplicate responses -> if the same question comes with diff options, update them, if not, let them be and if it's a new question, add it
 app.post('/response', (req, res) => {
   const formName = req.headers["form-name"]
   const userId = req.headers["user-id"]
